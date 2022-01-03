@@ -1,0 +1,30 @@
+Copy the '/cgi/SimplyImages' folder and contents to your cgi folder on your web host.
+
+Set the permissions of the SimplyImages.cgi file to 755.
+
+Modify the /cgi/templates/template.html file to suit your web page design.
+The following tokens must be present in your template:
+<%DirectoryTitle%> (Displays value of $DirectoryTitle from SimplyImages.cfg)
+ <%directories%> (Displays a randomly chosen thumbnail image from each directory)
+<%ImagesTitle%> (Displays value of $ImagesTitle from SimplyImages.cfg)
+<%images%> (Displays all images in a chosen directory)
+<%ImageTitle%> (Displays value of $ImageTitle from SimplyImages.cfg)
+<%image%> (Displays the full size image chosen)
+
+Modify SimplyImages.cfg to suit your taste.
+
+To show the images in a series of folders on your web host, use a starting URL of:
+http://www.yoursite.com/cgi/SimplyImages/SimplyImages.cgi?dir=../../photos
+
+Note the '../../photos' directory is relative to the SimplyImages.cgi script
+
+The photos directory must contain one or more folders containing nothing but image files.
+See the included photos folder for an example.
+
+The name of the folders and the name of the image files should be descriptive as they will be displayed below the image itself.
+
+This script can be used to show the contents of an unlimited number of directories.
+
+To see this script in action visit:
+http://www.castaliamusic.ca/
+and click on 'photos'
